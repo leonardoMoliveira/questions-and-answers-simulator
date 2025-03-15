@@ -1,6 +1,13 @@
+import '@mantine/core/styles.css';
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { createTheme, MantineProvider } from '@mantine/core';
+import { ColorSchemeScript, mantineHtmlProps } from '@mantine/core';
+
 import "./globals.css";
+
+const theme = createTheme({});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,11 +30,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR" {...mantineHtmlProps}>
+      <head>
+        <ColorSchemeScript />
+        <link rel="shortcut icon" href="/favicon.svg" />
+        <meta
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <MantineProvider theme={theme}>
+          {children}
+        </MantineProvider>
       </body>
     </html>
   );
