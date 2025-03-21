@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Container, Button, Text, Title } from '@mantine/core';
 
 import logo from '@/public/images/logo.png';
 
@@ -11,22 +10,22 @@ type CardProps = {
 }
 
 const Card = ({ title, description, href }: CardProps) => (
-  <div className='bg-primary-lighten rounded px-5 py-3'>
-    <Title order={3} size="xl" lh="xs">{title}</Title>
-    <Text lh="xs">{description}</Text>
-    <Button component={Link} href={href} bg='primary.9' mt={15}>Acessar</Button>
+  <div className="bg-primary-lighten rounded px-5 py-3">
+    <h3>{title}</h3>
+    <p>{description}</p>
+    <button>Acessar</button>
   </div>
 )
 
 export default function Page() {
   return (
-    <Container className='py-8'>
+    <div className='py-8'>
       <header className='mb-10'>
         <Image
           src={logo}
-          alt="Picture of the author"
+          alt="Brigada Militar do Rio Grande do Sul"
         />
-        <Title order={1} c="primary.9" py={10}>Sistema para criação de simulados</Title>
+        <h1>Sistema para criação de simulados</h1>
       </header>
 
 
@@ -48,7 +47,7 @@ export default function Page() {
           </li>
         </ul>
       </nav>
-    </Container>
+    </div>
 
   );
 }

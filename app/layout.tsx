@@ -2,9 +2,6 @@ import '@mantine/core/styles.css';
 
 import type { Metadata } from "next";
 import { Barlow_Semi_Condensed } from "next/font/google";
-import { ColorSchemeScript, MantineProvider, mantineHtmlProps } from '@mantine/core';
-
-import theme from '@/theme';
 
 import "./globals.css";
 
@@ -19,18 +16,13 @@ export const metadata: Metadata = {
   description: 'App para simular provas de concursos públicos',
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+export default function RootLayout({ children }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" {...mantineHtmlProps}>
-      <head>
-        <ColorSchemeScript />
-      </head>
+    <html lang="pt-BR">
       <body className={`${barlowSemiCondensed.variable} antialiased`}>
-        <MantineProvider theme={theme}>{children}</MantineProvider>
+        {children}
       </body>
     </html>
   );
