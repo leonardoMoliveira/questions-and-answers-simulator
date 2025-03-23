@@ -1,5 +1,3 @@
-import '@mantine/core/styles.css';
-
 import type { Metadata } from "next";
 import { Barlow_Semi_Condensed } from "next/font/google";
 

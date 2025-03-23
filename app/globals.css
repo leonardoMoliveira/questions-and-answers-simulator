@@ -1,10 +1,5 @@
 @import "tailwindcss";
 
-@theme {
-  --color-primary: var(--mantine-color-primary-9);
-  --color-primary-lighten: var(--mantine-color-primary-1);
-}
-
 body {
   font: 16px Barlow Semi Condensed, sans-serif;
   background: #fff;
