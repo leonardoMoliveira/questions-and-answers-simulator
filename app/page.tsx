@@ -21,8 +21,10 @@ const Card = ({ title, description, href }: CardProps) => (
 )
 
 export default function Page() {
+  const foo = "bar";
+
   return (
-    <Container py={30}>
+    < Container py={30}>
       <header className='mb-10'>
         <Image
           src={logo}
