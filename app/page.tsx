@@ -1,7 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Container } from "@chakra-ui/react"
-import { Button, HStack } from "@chakra-ui/react"
 
 
 import logo from '@/public/images/logo.png';
@@ -13,31 +11,25 @@ type CardProps = {
 }
 
 const Card = ({ title, description, href }: CardProps) => (
-  <div className="bg-primary-lighten rounded px-5 py-3">
-    <h3>{title}</h3>
+  <div className="flex flex-col items-start bg-primary-lighten rounded px-5 py-3">
+    <h3 className='text-xl font-bold'>{title}</h3>
     <p>{description}</p>
-    <button>Acessar</button>
+    <Link href={href} className='bg-primary py-2.5 p-3 text-white font-bold leading-5 rounded mt-5 cursor-pointer hover:scale-95'>
+      Acessar
+    </Link>
   </div>
 )
 
 export default function Page() {
-  const foo = "bar";
-
   return (
-    < Container py={30}>
+    <div>
       <header className='mb-10'>
         <Image
           src={logo}
           alt="Brigada Militar do Rio Grande do Sul"
         />
-        <h1>Sistema para criação de simulados</h1>
+        <h2 className='text-3xl font-bold text-primary mt-3'>Sistema para criação de simulados</h2>
       </header>
-
-
-      <HStack>
-        <Button colorPalette="primary">Click me</Button>
-        <Button colorPalette="secondary">Click me</Button>
-      </HStack>
 
       <nav>
         <ul className='grid grid-cols-2 gap-4'>
@@ -57,6 +49,6 @@ export default function Page() {
           </li>
         </ul>
       </nav>
-    </Container>
+    </div>
   );
 }

@@ -1,3 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #535146;
+  --color-primary-lighten: #E6E6E6;
+  --color-secondary: #dec208;
+}
+
 body {
   font: 16px 'Barlow Semi Condensed', sans-serif;
   background: #fff;

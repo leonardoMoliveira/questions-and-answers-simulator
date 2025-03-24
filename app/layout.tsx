@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Barlow_Semi_Condensed } from "next/font/google";
 
-import { Provider } from "@/components/ui/provider"
-
 import "./globals.css";
 
 const barlowSemiCondensed = Barlow_Semi_Condensed({
@@ -21,8 +19,8 @@ export default function RootLayout({ children }: Readonly<{
 }>) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
-      <body className={`${barlowSemiCondensed.variable} antialiased`}>
-        <Provider>{children}</Provider>
+      <body className={`${barlowSemiCondensed.variable} antialiased max-w-5xl m-auto p-8`}>
+        {children}
       </body>
     </html>
   );
