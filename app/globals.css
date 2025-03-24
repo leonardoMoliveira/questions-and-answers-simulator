@@ -1,7 +1,5 @@
-@import "tailwindcss";
-
 body {
-  font: 16px Barlow Semi Condensed, sans-serif;
+  font: 16px 'Barlow Semi Condensed', sans-serif;
   background: #fff;
   color: #000;
 }

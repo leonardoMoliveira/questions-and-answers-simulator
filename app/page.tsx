@@ -1,5 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { Container } from "@chakra-ui/react"
+import { Button, HStack } from "@chakra-ui/react"
+
 
 import logo from '@/public/images/logo.png';
 
@@ -19,7 +22,7 @@ const Card = ({ title, description, href }: CardProps) => (
 
 export default function Page() {
   return (
-    <div className='py-8'>
+    <Container py={30}>
       <header className='mb-10'>
         <Image
           src={logo}
@@ -28,6 +31,11 @@ export default function Page() {
         <h1>Sistema para criação de simulados</h1>
       </header>
 
+
+      <HStack>
+        <Button colorPalette="primary">Click me</Button>
+        <Button colorPalette="secondary">Click me</Button>
+      </HStack>
 
       <nav>
         <ul className='grid grid-cols-2 gap-4'>
@@ -47,7 +55,6 @@ export default function Page() {
           </li>
         </ul>
       </nav>
-    </div>
-
+    </Container>
   );
 }
