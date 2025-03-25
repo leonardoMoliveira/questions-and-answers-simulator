@@ -1,3 +1,5 @@
+import { Title } from '@/components';
+
 export default function Page() {
   const data = [
     { id: 1, name: "John Doe", email: "john@example.com", role: "Admin" },
@@ -8,6 +10,7 @@ export default function Page() {
 
   return (
     <div className="overflow-x-auto">
+      <Title className='mb-5'>Cadastro de Questões</Title>
       <table className="min-w-full border-collapse border border-gray-200 shadow-md rounded-lg overflow-hidden">
         <thead>
           <tr className="bg-primary text-white">

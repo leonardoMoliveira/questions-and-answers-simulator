@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { Title } from '@/components';
+
 
 import logo from '@/public/images/logo.png';
 
@@ -28,7 +30,7 @@ export default function Page() {
           src={logo}
           alt="Brigada Militar do Rio Grande do Sul"
         />
-        <h2 className='text-3xl font-bold text-primary mt-3'>Sistema para criação de simulados</h2>
+        <Title>Sistema para criação de simulados</Title>
       </header>
 
       <nav>

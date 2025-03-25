@@ -16,6 +16,7 @@ export function Breadcrumbs({ crumbs }: BreadcrumbsProps) {
         <ul className='flex gap-2.5'>
           {[{ title: 'Página Inicial', href: '/' }, ...crumbs].map((crumb, index) => (
             <li key={index}>
+              {index > 0 && <span className='font-bold mr-2'>{'<'}</span>}
               <Link className='hover:font-bold' href={crumb.href}>{crumb.title}</Link>
             </li>
           ))}
